@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #4c02f8;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+nav .logo {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav .search input {
+    width: 600px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+nav .buttons button {
+    padding: 10px 25px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #000;
+    color: #fff;
+    width: 150px;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .sidebar {
+    height: 100%;
+    width: 400px;
+    background-color: #f2f2f2;
+    /* padding: 30px 0; */
+    /* padding-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+main .sidebar .sidebar-content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+
+main .sidebar .link-item {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .sidebar .link-item a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main .viewport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+
+main .viewport .video-wrapper {
+    width: 40%;
+    /* height: 100%; */
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+}
+
+.viewport .video-wrapper .video {
+    display: flex;
+    height: 100vh;
+    gap: 15px;
+}
+
+.viewport .video-wrapper .video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.viewport .video-wrapper .video .like-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.viewport .video-wrapper .video .like-section .like-items {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewport .video-wrapper .video .like-section span .numbers {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+
+}
+
+.viewport .video-wrapper .video .like-section .like-items i {
+    font-size: 20px;
+    color: #000;
+}
+
+.viewport .video-wrapper .video .like-section .like-items:hover {
+    scale: 1.1;
+}
+
+.viewport .video-wrapper .video-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.viewport .video-wrapper .video-footer .user-follow{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewport .video-wrapper .video-footer .user-follow .follow button{
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    padding: 7px 25px;
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+.viewport .video-wrapper .video-footer .user-follow .follow button:hover{
+    background-color: rgb(243, 207, 207);
+}
+
+.video-wrapper .video-footer .user-info {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 15px;
+}
+
+.video-wrapper .video-footer .user-info .user-img img {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+
+
+}
+
+.video-wrapper .video-footer .description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+   
+
+}
+
+.video-wrapper .video-footer .video-description p {
+    font-size: 15px;
+    font-weight: 100;
+    color: #000;
+    margin-bottom: 10px;
+}
+.authentication{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 80%;
+    /* position: absolute; */
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.login .heading h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+.login .login-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+.login .login-inputs button{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login .login-inputs input{
+   width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: rgba(146, 134, 134, 0.1);
+}
+
+.login .other-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1pxsolid black;
+}
+
+.login .other-options .login-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1pxsolid black;
+}
+.login .other-options .login-icons img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login .login-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.login .login-footer a{
+    text-decoration: none;
+    color: blue;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signup{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 90%;
+    /* position: absolute; */
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.signup .heading h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+.signup .signup-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+.signup .signup-inputs button{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.signup .signup-inputs input{
+   width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: rgba(146, 134, 134, 0.1);
+}
+
+.signup .other-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1pxsolid black;
+}
+
+.signup .other-options .signup-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1pxsolid black;
+}
+.signup .other-options .signup-icons img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.signup .signup-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.signup .signup-footer a{
+    text-decoration: none;
+    color: blue;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.onboarding{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.onboarding-dialogue{
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.onboarding-dialogue .heading h3{
+    font-size: 30px;
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+    margin: 5px 0;
+}
+.onboarding-dialogue .heading p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+.onboarding-dialogue .topics{
+    display:  grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1pxsolid black;
+    padding: 10px;
+}
+.onboarding-dialogue .topics .topic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.onboarding-dialogue .topics .topic:hover{
+    background-color: #f0f0f0;
+    color: #fff;
+}
+.onboarding-dialogue .topics .topic img{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.onboarding-dialogue .footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .close button{
+    padding: 10px 20px;
+    background-color: rgb(240, 232, 217);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer .next button{
+    padding: 10px 20px;
+    background-color: rgba(0, 121, 219, 0.959);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
